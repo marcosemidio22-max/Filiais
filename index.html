@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portal de Governança Tecnológica</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+
+    background:
+    radial-gradient(circle at top left,#aabfec 0%,transparent 30%),
+    radial-gradient(circle at top right,#5a585e 0%,transparent 30%),
+    linear-gradient(135deg,#050505,#0f172a,#111827);
+
+    color:#fff;
+    min-height:100vh;
+}
+
+/* HEADER */
+
+header{
+    position:relative;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(20px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    text-align:center;
+
+    padding:40px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.4);
+}
+
+.logo{
+    position:absolute;
+    top:15px;
+    right:25px;
+    width:150px;
+}
+
+header h1{
+    font-size:40px;
+    font-weight:700;
+}
+
+header p{
+    margin-top:10px;
+    color:#cbd5e1;
+}
+
+/* KPIs */
+
+.dashboard{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    padding:30px;
+}
+
+.kpi{
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:25px;
+
+    padding:25px;
+
+    text-align:center;
+
+    transition:.4s;
+}
+
+.kpi:hover{
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 15px 35px rgba(59,130,246,.35);
+}
+
+.kpi h2{
+    font-size:42px;
+}
+
+.kpi p{
+    color:#cbd5e1;
+    margin-top:8px;
+}
+
+/* BUSCA */
+
+.busca{
+    padding:0 30px 20px;
+}
+
+.busca input{
+    width:100%;
+
+    padding:16px;
+
+    border-radius:18px;
+
+    border:1px solid rgba(255,255,255,.10);
+
+    background:rgba(255,255,255,.05);
+
+    color:#fff;
+
+    backdrop-filter:blur(10px);
+}
+
+.busca input::placeholder{
+    color:#94a3b8;
+}
+
+/* CARDS */
+
+.container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+    padding:30px;
+}
+
+.card{
+    background:rgba(255,255,255,.06);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    text-decoration:none;
+
+    color:white;
+
+    transition:.4s;
+}
+
+.card:hover{
+    transform:
+    translateY(-10px)
+    scale(1.02);
+
+    border-color:#60a5fa;
+
+    box-shadow:
+    0 20px 50px rgba(59,130,246,.30);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.info{
+    padding:20px;
+}
+
+.nome{
+    font-size:25px;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+.status{
+    display:inline-block;
+
+    padding:8px 15px;
+
+    border-radius:999px;
+
+    font-size:14px;
+
+    font-weight:bold;
+}
+
+.verde{
+    background:rgba(34,197,94,.15);
+    color:#4ade80;
+}
+
+.amarelo{
+    background:rgba(250,204,21,.15);
+    color:#facc15;
+}
+
+.vermelho{
+    background:rgba(239,68,68,.15);
+    color:#f87171;
+}
+
+/* FAIXA TECNOLÓGICA */
+
+.banner{
+    margin:0 30px;
+
+    padding:18px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    color:#cbd5e1;
+
+    font-size:14px;
+
+    letter-spacing:1px;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+
+    padding:25px;
+
+    margin-top:20px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    color:#cbd5e1;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <img src="Nors.jpg" class="logo" alt="Logo">
+
+    <h1>⚡ Portal de Governança Tecnológica</h1>
+
+    <p>Monitoramento Central das Filiais</p>
+
+</header>
+
+<div class="dashboard">
+
+    <div class="kpi">
+        <h2>08</h2>
+        <p>Filiais Monitoradas</p>
+    </div>
+
+    <div class="kpi">
+        <h2>02</h2>
+        <p>Críticas</p>
+    </div>
+
+    <div class="kpi">
+        <h2>03</h2>
+        <p>Em Atenção</p>
+    </div>
+
+    <div class="kpi">
+        <h2>03</h2>
+        <p>Estáveis</p>
+    </div>
+
+</div>
+
+<div class="banner">
+    🌐 GOVERNANÇA • INFRAESTRUTURA • SERVICE DESK • REDES • SEGURANÇA DA INFORMAÇÃO
+</div>
+
+<br>
+
+<div class="busca">
+    <input type="text" placeholder="🔍 Pesquisar filial...">
+</div>
+
+<div class="container">
+
+    <a href="campinas.html" class="card">
+        <img src="FOTOcampi.jpg.png" alt="Campinas">
+        <div class="info">
+            <div class="nome">Campinas</div>
+            <div class="status verde">🟢 Estável</div>
+        </div>
+    </a>
+
+    <a href="limeira.html" class="card">
+        <img src="Lime.jpg" alt="Limeira">
+        <div class="info">
+            <div class="nome">Limeira</div>
+            <div class="status verde">🟢 Estável</div>
+        </div>
+    </a>
+
+    <a href="santos.html" class="card">
+        <img src="Santos.jpg" alt="Santos">
+        <div class="info">
+            <div class="nome">Santos</div>
+            <div class="status verde">🟢 Estável</div>
+        </div>
+    </a>
+
+    <a href="portoferreira.html" class="card">
+        <img src="PF.jpg" alt="Porto Ferreira">
+        <div class="info">
+            <div class="nome">Porto Ferreira</div>
+            <div class="status verde">🟢 Estável</div>
+        </div>
+    </a>
+
+    <a href="ABC.html" class="card">
+        <img src="abc.jpg" alt="ABC">
+        <div class="info">
+            <div class="nome">ABC</div>
+            <div class="status verde">🟢 Estável</div>
+        </div>
+    </a>
+
+    <a href="cegonha.html" class="card">
+        <img src="cegonha.jpg" alt="Cegonha">
+        <div class="info">
+            <div class="nome">Cegonha</div>
+            <div class="status verde">🟢 Estável</div>
+        </div>
+    </a>
+
+    <a href="guarulhos.html" class="card">
+        <img src="Guarulhos.jpg" alt="Guarulhos">
+        <div class="info">
+            <div class="nome">Guarulhos</div>
+            <div class="status verde">🟢 Estável</div>
+        </div>
+    </a>
+
+    <a href="cacapava.html" class="card">
+        <img src="cacapava.jpg" alt="Caçapava">
+        <div class="info">
+            <div class="nome">Caçapava</div>
+            <div class="status verde">🟢 Estável</div>
+        </div>
+    </a>
+
+    <a href="jaragua.html" class="card">
+        <img src="Jaragua.jpg" alt="Jaraguá">
+        <div class="info">
+            <div class="nome">Jaraguá</div>
+            <div class="status verde">🟢 Estável</div>
+        </div>
+    </a>
+
+</div>
+
+<footer>
+    Portal de Governança Tecnológica © 2026 | Versão 2.0
+</footer>
+
+</body>
+</html>
