@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melhorias - Filial Campinas</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:'Segoe UI',sans-serif;
+
+            background:
+            radial-gradient(circle at top left,#929db4 0%,transparent 25%),
+            radial-gradient(circle at top right,#121114 0%,transparent 25%),
+            linear-gradient(135deg,#050505,#0f172a,#111827);
+
+            color:white;
+            min-height:100vh;
+        }
+
+        header{
+            background:rgba(255,255,255,.06);
+            backdrop-filter:blur(15px);
+            border-bottom:1px solid rgba(255,255,255,.08);
+            text-align:center;
+            padding:25px;
+        }
+
+        .container{
+            width:90%;
+            max-width:1200px;
+            margin:30px auto;
+        }
+
+        .botao-voltar{
+            display:inline-block;
+            text-decoration:none;
+
+            color:white;
+
+            padding:12px 20px;
+
+            border-radius:15px;
+
+            background:rgba(255,255,255,.08);
+
+            border:1px solid rgba(255,255,255,.10);
+
+            transition:.3s;
+        }
+
+        .botao-voltar:hover{
+            transform:translateY(-3px);
+
+            box-shadow:
+            0 10px 25px rgba(30,33,39,.4);
+        }
+
+        .melhoria{
+
+            background:
+            rgba(255,255,255,.06);
+
+            border:1px solid rgba(255,255,255,.08);
+
+            backdrop-filter:blur(15px);
+
+            border-radius:20px;
+
+            padding:25px;
+
+            margin-bottom:20px;
+
+            transition:.3s;
+        }
+
+        .melhoria:hover{
+
+            transform:translateY(-5px);
+
+            box-shadow:
+            0 15px 35px rgba(59,130,246,.20);
+        }
+
+        .melhoria h2{
+
+            color:#dbe4f0;
+
+            margin-bottom:15px;
+
+            border-left:5px solid #6786ac;
+
+            padding-left:12px;
+        }
+
+        .status{
+            display:inline-block;
+
+            margin-top:15px;
+
+            padding:8px 14px;
+
+            border-radius:20px;
+
+            font-weight:bold;
+        }
+
+        .planejada{
+            background:rgba(250,204,21,.15);
+            color:#facc15;
+        }
+
+        .andamento{
+            background:rgba(59,130,246,.15);
+            color:#60a5fa;
+        }
+
+        .concluida{
+            background:rgba(34,197,94,.15);
+            color:#4ade80;
+        }
+
+        @media(max-width:768px){
+
+            .container{
+                width:95%;
+            }
+
+            .botao-voltar{
+                display:block;
+                width:fit-content;
+                margin:0 auto 15px auto;
+            }
+
+            h1{
+                font-size:26px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header>
+
+    <a href="Campinas.html" class="botao-voltar">← Voltar</a>
+
+    <h1>🚀 Melhorias da Filial Campinas</h1>
+
+</header>
+
+<div class="container">
+
+    <div class="melhoria">
+
+        <h2>Organização do Rack</h2>
+
+        <p>
+            Reorganização completa do rack principal com identificação,
+            etiquetagem e separação adequada dos cabeamentos.
+        </p>
+
+        <span class="status andamento">
+            🔵 Em Andamento
+        </span>
+
+    </div>
+
+    <div class="melhoria">
+
+        <h2>Teste e Ajuste dos Access Points</h2>
+
+        <p>
+            Validação da cobertura Wi-Fi, ajuste de canais e otimização
+            dos pontos de acesso da unidade.
+        </p>
+
+        <span class="status planejada">
+            🟡 Planejada
+        </span>
+
+    </div>
+
+    <div class="melhoria">
+
+        <h2>Organização da Infraestrutura da Consultoria</h2>
+
+        <p>
+            Adequação da estrutura física, documentação dos ativos
+            e padronização dos equipamentos de TI.
+        </p>
+
+        <span class="status andamento">
+            🔵 Em Andamento
+        </span>
+
+    </div>
+
+    <div class="melhoria">
+
+        <h2>Atualização dos Equipamentos</h2>
+
+        <p>
+            Renovação gradual de computadores e periféricos que apresentam
+            obsolescência tecnológica.
+        </p>
+
+        <span class="status planejada">
+            🟡 Planejada
+        </span>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
