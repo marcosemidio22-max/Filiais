@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendências - Filial Campinas</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:'Segoe UI',sans-serif;
+            background:
+                radial-gradient(circle at top left,#929db4 0%,transparent 25%),
+                radial-gradient(circle at top right,#121114 0%,transparent 25%),
+                linear-gradient(135deg,#050505,#0f172a,#111827);
+            color:white;
+            min-height:100vh;
+        }
+
+        header{
+            background:rgba(255,255,255,.06);
+            backdrop-filter:blur(15px);
+            border-bottom:1px solid rgba(255,255,255,.08);
+            padding:25px;
+            text-align:center;
+        }
+
+        h1{
+            margin-top:15px;
+        }
+
+        .container{
+            max-width:1200px;
+            margin:auto;
+            padding:30px;
+        }
+
+        .voltar{
+            display:inline-block;
+            background:rgba(255,255,255,.08);
+            border:1px solid rgba(255,255,255,.10);
+            color:white;
+            text-decoration:none;
+            padding:12px 20px;
+            border-radius:15px;
+            transition:.3s;
+        }
+
+        .voltar:hover{
+            transform:translateY(-3px);
+            box-shadow:0 10px 25px rgba(30,33,39,.4);
+        }
+
+        .card{
+            background:rgba(255,255,255,.06);
+            border:1px solid rgba(255,255,255,.08);
+            backdrop-filter:blur(15px);
+            border-radius:25px;
+            padding:25px;
+        }
+
+        .card h2{
+            border-left:5px solid #6786ac;
+            padding-left:15px;
+            margin-bottom:20px;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        th{
+            background:#1e293b;
+            color:white;
+            padding:14px;
+            text-align:left;
+        }
+
+        td{
+            padding:14px;
+            border-bottom:1px solid rgba(255,255,255,.08);
+        }
+
+        tr:hover{
+            background:rgba(255,255,255,.04);
+        }
+
+        .aberta{
+            color:#f87171;
+            font-weight:bold;
+        }
+
+        .andamento{
+            color:#facc15;
+            font-weight:bold;
+        }
+
+        .concluida{
+            color:#4ade80;
+            font-weight:bold;
+        }
+
+        @media(max-width:768px){
+
+            .container{
+                padding:15px;
+            }
+
+            table{
+                display:block;
+                overflow-x:auto;
+                white-space:nowrap;
+            }
+
+            h1{
+                font-size:28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <a href="campinas.html" class="voltar">← Voltar</a>
+
+        <h1>📋 Pendências da Filial Campinas</h1>
+
+    </header>
+
+    <div class="container">
+
+        <div class="card">
+
+            <h2>Controle de Pendências</h2>
+
+            <table>
+
+                <tr>
+                    <th>ID</th>
+                    <th>Descrição</th>
+                    <th>Responsável</th>
+                    <th>Data</th>
+                    <th>Status</th>
+                </tr>
+
+                <tr>
+                    <td>P001</td>
+                    <td>Organização do Rack</td>
+                    <td>TI</td>
+                    <td>07/10/2026</td>
+                    <td class="aberta">🔴 Aberta</td>
+                </tr>
+
+                <tr>
+                    <td>P002</td>
+                    <td>Substituição de Nobreak</td>
+                    <td>Infraestrutura</td>
+                    <td>08/10/2026</td>
+                    <td class="aberta">🔴 Aberta</td>
+                </tr>
+
+                <tr>
+                    <td>P003</td>
+                    <td>Troca de Computadores Antigos</td>
+                    <td>TI</td>
+                    <td>09/10/2026</td>
+                    <td class="andamento">🟡 Em Andamento</td>
+                </tr>
+
+                <tr>
+                    <td>P004</td>
+                    <td>Documentação de Rede</td>
+                    <td>Governança</td>
+                    <td>09/10/2026</td>
+                    <td class="aberta">🔴 Aberta</td>
+                </tr>
+
+                <tr>
+                    <td>P005</td>
+                    <td>Atualização de Inventário</td>
+                    <td>TI</td>
+                    <td>10/10/2026</td>
+                    <td class="concluida">🟢 Concluída</td>
+                </tr>
+
+                <tr>
+                    <td>P006</td>
+                    <td>Padronização da Sala Técnica</td>
+                    <td>Infraestrutura</td>
+                    <td>10/10/2026</td>
+                    <td class="aberta">🔴 Aberta</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
