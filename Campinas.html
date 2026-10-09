@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filial Campinas</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background:
+                radial-gradient(circle at top left, #929db4 0%, transparent 25%),
+                radial-gradient(circle at top right, #121114 0%, transparent 25%),
+                linear-gradient(135deg, #050505, #0f172a, #111827);
+            color: white;
+            min-height: 100vh;
+            padding: 30px;
+        }
+
+        .botao {
+            display: inline-block;
+            padding: 12px 20px;
+            background: rgba(255, 255, 255, .08);
+            border: 1px solid rgba(255, 255, 255, .10);
+            border-radius: 15px;
+            backdrop-filter: blur(15px);
+            color: white;
+            text-decoration: none;
+            transition: .3s;
+        }
+
+        .botao:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(30, 33, 39, .4);
+        }
+
+        h1 {
+            margin: 25px 0;
+            font-size: 42px;
+        }
+
+        /* Atalhos */
+
+        .menu-atalhos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .indicador {
+            flex: 1;
+            min-width: 220px;
+            background: rgba(255, 255, 255, .06);
+            border: 1px solid rgba(255, 255, 255, .08);
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            transition: .3s;
+        }
+
+        .indicador:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(59, 130, 246, .25);
+        }
+
+        .indicador a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        /* KPIs */
+
+        .kpi-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .kpi {
+            background: rgba(255, 255, 255, .06);
+            border: 1px solid rgba(255, 255, 255, .08);
+            border-radius: 25px;
+            backdrop-filter: blur(20px);
+            padding: 25px;
+            text-align: center;
+            transition: .3s;
+        }
+
+        .kpi:hover {
+            transform: translateY(-5px);
+        }
+
+        .kpi h2 {
+            font-size: 34px;
+            margin-bottom: 10px;
+            color: #829dbe;
+        }
+
+        .kpi p {
+            color: #cbd5e1;
+        }
+
+        /* Cards */
+
+        .card {
+            background: rgba(255, 255, 255, .06);
+            border: 1px solid rgba(255, 255, 255, .08);
+            backdrop-filter: blur(15px);
+            border-radius: 25px;
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        .titulo-secao {
+            border-left: 5px solid #6786ac;
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+
+        .card p {
+            margin-bottom: 10px;
+        }
+
+        /* Tabelas */
+
+        .tabela {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .tabela th {
+            background: #1e293b;
+            color: white;
+            padding: 14px;
+            text-align: left;
+        }
+
+        .tabela td {
+            padding: 14px;
+            border-bottom: 1px solid rgba(255, 255, 255, .08);
+        }
+
+        .tabela tr:hover {
+            background: rgba(255, 255, 255, .04);
+        }
+
+        /* Status */
+
+        .status-aberto {
+            color: #f87171;
+            font-weight: bold;
+        }
+
+        .status-andamento {
+            color: #facc15;
+            font-weight: bold;
+        }
+
+        /* Maturidade */
+
+        .barra {
+            height: 30px;
+            background: rgba(255, 255, 255, .08);
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .preenchimento {
+            height: 100%;
+            background: linear-gradient(90deg, #898d94, #1b1a1d);
+            line-height: 30px;
+            text-align: right;
+            padding-right: 15px;
+            font-weight: bold;
+        }
+
+        /* Responsivo */
+
+        @media(max-width:768px) {
+
+            body {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 30px;
+                text-align: center;
+            }
+
+            .botao {
+                display: block;
+                width: fit-content;
+                margin: 0 auto 20px;
+            }
+
+            .menu-atalhos {
+                flex-direction: column;
+            }
+
+            .tabela {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <a href="index.html" class="botao">← Voltar</a>
+
+    <h1>🏢 Filial Campinas</h1>
+
+    <!-- Atalhos -->
+
+    <div class="menu-atalhos">
+
+        <div class="indicador">
+            <a href="pendencias.html">📋 Pendências</a>
+        </div>
+
+        <div class="indicador">
+            <a href="melhorias.html">🚀 Melhorias</a>
+        </div>
+
+        <div class="indicador">
+            <a href="estrutura.html">🏢 Estrutura</a>
+        </div>
+
+        <div class="indicador">
+            <a href="historico.html">📝 Histórico</a>
+        </div>
+
+    </div>
+
+    <!-- KPIs -->
+
+    <div class="kpi-container">
+
+        <div class="kpi">
+            <h2>42</h2>
+            <p>👥 Colaboradores</p>
+        </div>
+
+        <div class="kpi">
+            <h2>38</h2>
+            <p>💻 Computadores</p>
+        </div>
+
+        <div class="kpi">
+            <h2>10</h2>
+            <p>🖨️ Impressoras</p>
+        </div>
+
+        <div class="kpi">
+            <h2>04</h2>
+            <p>📡 Access Points</p>
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h2 class="titulo-secao">Resumo Executivo</h2>
+
+        <p><strong>Endereço:</strong> Estr. Mun. Joannine Caumo, 315 - Nova Aparecida</p>
+        <p><strong>Gestor:</strong> Carlos Justino</p>
+
+        <table class="tabela">
+            <tr>
+                <th>Empresa</th>
+                <th>Designação</th>
+                <th>IP</th>
+                <th>Contato</th>
+                <th>Porta PA</th>
+            </tr>
+
+            <tr>
+                <td>CLARO</td>
+                <td>CAS/IP/33130</td>
+                <td>172.28.23.25</td>
+                <td>0800704521</td>
+                <td>-</td>
+            </tr>
+
+            <tr>
+                <td>VIVO</td>
+                <td>111353281037691</td>
+                <td>ON</td>
+                <td>atendimentoempresas@vivo.com.br</td>
+                <td>-</td>
+            </tr>
+        </table>
+
+    </div>
+
+    <div class="card">
+
+        <h2 class="titulo-secao">Informações Gerais</h2>
+
+        <p>🔌 Switches: 3</p>
+        <p>🌐 Links de Internet: 2</p>
+        <p>📍 Unidade Operacional Ativa</p>
+
+    </div>
+
+    <div class="card">
+
+        <h2 class="titulo-secao">Avaliação de Maturidade</h2>
+
+        <p>Infraestrutura</p>
+        <div class="barra">
+            <div class="preenchimento" style="width:60%">3</div>
+        </div>
+
+        <p>Equipamentos</p>
+        <div class="barra">
+            <div class="preenchimento" style="width:80%">4</div>
+        </div>
+
+        <p>Rede</p>
+        <div class="barra">
+            <div class="preenchimento" style="width:100%">5</div>
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h2 class="titulo-secao">📋 Pendências</h2>
+
+        <table class="tabela">
+
+            <tr>
+                <th>ID</th>
+                <th>Problema</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>P001</td>
+                <td>Nobreak sem autonomia adequada</td>
+                <td class="status-aberto">🔴 Aberto</td>
+            </tr>
+
+            <tr>
+                <td>P002</td>
+                <td>Computadores antigos</td>
+                <td class="status-andamento">🟡 Em andamento</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+</body>
+
+</html>
